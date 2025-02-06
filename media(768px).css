@@ -1,0 +1,11 @@
+/* @media (max-width: 768px) {
+    .slider {
+        width: 100px;
+        height: 50;
+    }
+
+    .slider span {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(calc(25vmin));
+    }
+} */
+

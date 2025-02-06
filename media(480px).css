@@ -1,0 +1,83 @@
+@media (max-width: 480px) {
+    .slider {
+        width: 150px;
+        height: 150px;
+        /* gap: 20px; */
+    }
+
+    .slider span {
+        transform: rotateY(calc(var(--i) * 45deg)) translateZ(calc(40vmin));
+    }
+
+    body {
+        /* background: linear-gradient(to right , #2c5364 , #0f2027); */
+        height: 50vh;
+    }
+
+    .btn {
+        position: absolute;
+        height: 2em;
+        width: 8em;
+        left: 50%;
+        top: 88%;
+        transform: translate(-50%, -50%);
+    }
+    .row{
+        gap: 5px;
+    }
+    .col-lg-3 {
+        height: 150px;
+        width: 90%;
+    }
+
+    .container-1 p {
+        font-size: 15px;
+    }
+
+    .container p {
+        font-size: 1.2rem;
+    }
+
+    .container-1 h5 {
+        font-size: 14px;
+    }
+
+    .container-1 h6 {
+        font-size: 11px;
+    }
+
+
+    .bhai {
+        /* flex-direction: column; */
+    }
+
+    .box-bhai img,
+    .box-sister img{
+        width: 100%;
+        height: 40%;
+    }
+
+    h4 {
+        position: absolute;
+        top: 225px;
+        font-size: 16px;
+    }
+
+    .box-1 .btn {
+        font-size: 14px;
+        padding: 8px 16px;
+        position: absolute;
+        top: 385px;
+
+    }
+
+
+
+    .parkita {
+        padding: 20px;
+    }
+    .parkita-content h1 {
+        font-size: 5px;
+        padding: 8px 16px;
+    }
+}
