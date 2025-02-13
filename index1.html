@@ -4,26 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="media(480px).css" />
 </head>
 <body>
     
+    <div class="container-1">
+      <audio src="audio/WhatsApp Audio 2025-02-06 at 22.02.47_8c7cb66e.mp3" autoplay loop></audio>
+        <div class="row">
+            <div class="col-lg-3">
+                <img src="img/Screenshot 2025-01-24 000245.png" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="img/770cd1f8239ee24a502ac136ab2985a5.jpg" alt="">
+            </div>
+            <div class="col-lg-3">
+                <img src="img/Screenshot 2025-01-24 000213.png" alt="">
+            </div>
+        </div>
+        <!-- <p>Happiest Birthday Meri (Dhindu)</p> -->
+        <div class="container">
+            <p>Happiest Birthday Mari <span class="typed-text"></span><span class="cursor">&nbsp;</span></p>
+          </div>
+        <h5>तुम नहीं जानती कि तुम कितनी प्यारी हो। जान हो मेरी पर जान से भी प्यारी हो। किसी के होने से मुझे फर्क नहीं पड़ता। आप कल भी हमारी थी और आज भी हमारी हो। हैप्पी बर्थडे मारी ढिंगली। </h5>
+        <br>
+        <h6>आप आपके जीवन में हमेशा खुश रहों आपके उपर आपके मम्मी और पापा जी का आशीर्वाद हमेशा बना रहे और आपकी कुलदेवी श्री खिमज माताजी आपकी हर इच्छा पूरी करे। </h6>
 
-   <div class="box-1">
-    <audio src="audio/WhatsApp Audio 2025-01-28 at 00.24.32_b330f624.mp3" autoplay loop></audio>
-    <div class="bhai">
-        <div class="box-bhai">
-            <img src="img/Screenshot 2025-01-27 000606.png" alt="">
-        </div>
-        <div class="box-sister">
-            <img src="img/Screenshot 2025-01-27 213532.png" alt="">
-        </div>
-    </div>
-    <h4>बहन का प्यार किसी दुआ से कम नही होता | वो चाहे दूर भी हो तो कोई गम नही होता || अक्षर रिश्ते दूरियों से फीके पड जाते हे | पर भाई बहन का प्यार कभी कम नही होता  </h4>
-    <a href="index2.html">
-        <button class="btn">
+        <a href="index2.html">
+          <button class="btn">
             <div class="wrapper">
               <p class="text">< Next ></p>
     
@@ -65,7 +73,57 @@
               </div>
             </div>
           </button>
-    </a>
-   </div>
+        </a>
+    </div>
+
+
+    <script>
+        const typedTextSpan = document.querySelector(".typed-text");
+const cursorSpan = document.querySelector(".cursor");
+
+const textArray = ["Parkita", "Nikku", "Bataka", "Dhingu", "Vadapav Ri Chatni", "Gtu", "Bku", "Sing Ri chikki","Vonri", "Dhingli"];
+const typingDelay = 200;
+const erasingDelay = 100;
+const newTextDelay = 800; // Delay between current and next text
+let textArrayIndex = 0;
+let charIndex = 0;
+
+function type() {
+  if (charIndex < textArray[textArrayIndex].length) {
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
+    typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+    charIndex++;
+    setTimeout(type, typingDelay);
+  } else {
+    cursorSpan.classList.remove("typing");
+    setTimeout(erase, newTextDelay);
+  }
+}
+
+function erase() {
+  if (charIndex > 0) {
+    if (!cursorSpan.classList.contains("typing"))
+      cursorSpan.classList.add("typing");
+    typedTextSpan.textContent = textArray[textArrayIndex].substring(
+      0,
+      charIndex - 1
+    );
+    charIndex--;
+    setTimeout(erase, erasingDelay);
+  } else {
+    cursorSpan.classList.remove("typing");
+    textArrayIndex++;
+    if (textArrayIndex >= textArray.length) textArrayIndex = 0;
+    setTimeout(type, typingDelay + 1100);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+  // On DOM Load initiate the effect
+  if (textArray.length) setTimeout(type, newTextDelay + 250);
+});
+
+    </script>
 </body>
 </html>
