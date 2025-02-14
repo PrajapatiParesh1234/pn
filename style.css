@@ -712,29 +712,23 @@ p span.cursor.typing {
 
 
 @media (max-width: 480px) {
-
-    html,
-    body {
-        height: auto;
-        /* Allows content to adjust dynamically */
-        /* padding: 20px 0; */
-    }
-
     .cube {
-        /* width: 150px; */
-        /* Reduce cube size for small screens */
-        /* height: 150px; */
-    }
-
-    .cube__face img {
-        max-width: 80%;
+        width: 150px;
+        height: 150px;
     }
 
     .index6btn {
-        width: 80%;
-        font-size: 16px;
-        padding: 12px 20px;
-        margin: 20px auto;
-        margin-top: 180px;
+        position: absolute;
+        left: 70px;
+        /* top: 10; */
     }
+    .index5btn {
+        position: absolute;
+        left: 40px;
+        /* top: 10; */
+    }
+
+
+
+
 }

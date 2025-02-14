@@ -22,9 +22,11 @@
         top: 88%;
         transform: translate(-50%, -50%);
     }
-    .row{
+
+    .row {
         gap: 5px;
     }
+
     .col-lg-3 {
         height: 150px;
         width: 90%;
@@ -52,7 +54,7 @@
     }
 
     .box-bhai img,
-    .box-sister img{
+    .box-sister img {
         width: 100%;
         height: 40%;
     }
@@ -76,9 +78,14 @@
     .parkita {
         padding: 20px;
     }
+
     .parkita-content h1 {
         font-size: 5px;
         padding: 8px 16px;
     }
 }
+
+
+
+
 
